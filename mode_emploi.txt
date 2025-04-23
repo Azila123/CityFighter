@@ -8,9 +8,9 @@ Si vous utilisez Visual Studio Code :
         - Sous Windows : venv\Scripts\activate
         - Sous Mac/Linux : source venv/bin/activate
 
-- Installer les bibliothèques nécessaires : streamlit, pandas, plotly, openpyxl, requests, beautifulsoup4
+- Installer les bibliothèques nécessaires : streamlit, pandas, plotly, openpyxl, requests
 
-Commande: pip install streamlit pandas plotly requests beautifulsoup4 openpyxl
+Commande: pip install streamlit pandas plotly requests openpyxl
 
 Structure du dossier :
 - Base_data.py : traitement et nettoyage des données
