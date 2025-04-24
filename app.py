@@ -29,8 +29,8 @@ df = df.merge(df_logement, on="ville_regroupee", how="left")
 
 # === Sélection de villes ===
 villes = sorted(df["ville_regroupee"].unique())
-ville1 = st.sidebar.selectbox("📍 Ville 1", villes, index=villes.index("Paris") if "Paris" in villes else 0)
-ville2 = st.sidebar.selectbox("📍 Ville 2", villes, index=villes.index("Marseille") if "Marseille" in villes else 1)
+ville1 = st.sidebar.selectbox("📍 Ville 1", villes, index=villes.index("Paris") if "Lille" in villes else 0)
+ville2 = st.sidebar.selectbox("📍 Ville 2", villes, index=villes.index("Marseille") if "Lyon" in villes else 1)
 
 if ville1 == ville2:
     st.warning("⚠️ Veuillez sélectionner deux villes différentes.")
