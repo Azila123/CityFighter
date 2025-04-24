@@ -10,13 +10,13 @@ Si vous utilisez Visual Studio Code :
 
 - Installer les bibliothèques nécessaires : streamlit, pandas, plotly, openpyxl, requests
 
-Commande: pip install streamlit pandas plotly requests openpyxl
+Commande: pip install -r requirements.txt
 
 Structure du dossier :
 - Base_data.py : traitement et nettoyage des données
 - app.py : application Streamlit principale
 - Tous les fichiers de données (.xlsx, .csv) nécessaires à l’exécution de l’application.
-- Ce fichier mode_emploi.txt et un rapport.pdf expliquant les choix techniques.
+- Ce fichier mode_emploi.txt, requirements.txt et un rapport.pdf expliquant les choix techniques.
 
 Fichiers de données nécessaires :
     - POPULATION_MUNICIPALE_COMMUNES_FRANCE.xlsx
