@@ -3,6 +3,25 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import requests
+import gdown
+import os
+
+# === 1. Télécharger les fichiers Google Drive dans le dossier actuel ===
+fichiers_drive = {
+    "base-cc-emploi-pop-active-2020_v2.CSV": "1ZSzHZwxcsoDn4VxyjsPbj7K0zmoJYPdL",
+    "base-cc-logement-2020.CSV": "1LU57jvjNQSOGwnGM6_cNbENVYez1FKzP",
+    "data-es.csv": "1nn1TT2_2hNXLyDFOlA7StDYLOR0UE3NN",
+    "base-des-lieux-et-des-equipements-culturels.csv":"1SAGJ_bxmCx4G4FdwD3hcXlQNwYaHC_OM"
+}
+
+for nom_fichier, file_id in fichiers_drive.items():
+    if not os.path.exists(nom_fichier):
+        url = f"https://drive.google.com/uc?id={file_id}"
+        print(f"📥 Téléchargement de {nom_fichier}...")
+        gdown.download(url, nom_fichier, quiet=False)
+    else:
+        print(f"✅ {nom_fichier} déjà présent.")
+
 
 # === Configuration Streamlit ===
 st.set_page_config(page_title="City Fighting", layout="wide")
